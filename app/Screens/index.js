@@ -9,6 +9,7 @@ import {
   ScrollView,
   Image,
   Linking,
+  Platform,
 } from 'react-native';
 import {Container, Icon, Button, Card, CardItem, Header} from 'native-base';
 import NavigationService from '@Service/Navigation';
@@ -71,17 +72,17 @@ export default class Terms extends Component {
           <View
             style={{
               flex: 1,
+              marginTop: Platform.OS === 'ios' ? 30 : 0
             }}>
             <WebView
               source={{uri: 'https://westernaf.com'}}
               startInLoadingState={true}
               showsVerticalScrollIndicator={false}
-            //   renderLoading={() => {
-            //     this.displaySpinner();
-            //   }}
+              //   renderLoading={() => {
+              //     this.displaySpinner();
+              //   }}
               onLoadStart={()=>{
                 // this.displaySpinner();
-
               }}
             />
           </View>

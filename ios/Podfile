@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'Atrial' do
+target 'atrial' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'AtrialTests' do
+  target 'atrialTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'Atrial' do
   end
 end
 
-target 'Atrial-tvOS' do
-  # Pods for Atrial-tvOS
+target 'atrial-tvOS' do
+  # Pods for atrial-tvOS
 
-  target 'Atrial-tvOSTests' do
+  target 'atrial-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
